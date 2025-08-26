@@ -1,7 +1,7 @@
 title: Temario Java
 description: Temario de Programación en Java — modular y fácil de mantener
-baseurl: "" # deja vacío si publicas en https://usuario.github.io/repositorio
-url: "https://jlcastellano.github.io/java" # cambia 'usuario' por tu user/org
+baseurl: "/java" # deja vacío si publicas en https://usuario.github.io/repositorio
+url: "https://jlcastellano.github.io" # cambia 'usuario' por tu user/org
 
 theme: minima # tema simple compatible con GitHub Pages
 plugins:
