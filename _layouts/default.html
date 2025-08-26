@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      {% include menu.html %}
+    </div>
+  </header>
+
+  <main class="site-content wrap" role="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>
+        © {{ "now" | date: "%Y" }} · {{ site.title }} · Java {{ site.java_version }} ·
+        <a href="{{ site.repo_url }}">Repo</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

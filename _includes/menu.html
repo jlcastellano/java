@@ -1,0 +1,28 @@
+<nav class="site-nav" aria-label="Principal">
+  <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+  <ul id="menu">
+    {% assign items = site.nav %}
+    {% if items %}
+      {% for item in items %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    {% else %}
+      <!-- Respaldo si no hay site.nav en _config.yml -->
+      <li><a href="{{ '/' | relative_url }}">Inicio</a></li>
+      <li><a href="{{ '/about/' | relative_url }}">Sobre</a></li>
+    {% endif %}
+  </ul>
+</nav>
+<script>
+  // Toggle simple para móvil
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('menu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function () {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('open');
+    });
+  });
+</script>

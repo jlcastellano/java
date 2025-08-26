@@ -1,0 +1,27 @@
+title: Temario Java
+description: Temario de Programación en Java — modular y fácil de mantener
+baseurl: "" # deja vacío si publicas en https://usuario.github.io/repositorio
+url: "https://jlcastellano.github.io/java" # cambia 'usuario' por tu user/org
+
+theme: minima # tema simple compatible con GitHub Pages
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Navegación simple para generar el menú (opcional si prefieres _includes)
+nav:
+  - title: Inicio
+    url: /
+  - title: Temario
+    url: /#temario
+  - title: Sobre
+    url: /about/
+
+# Parámetros personalizados (útiles en layouts)
+java_version: "21 LTS"
+repo_url: "https://github.com/jlcastellano/java" # actualiza
+
+# Opciones de Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
